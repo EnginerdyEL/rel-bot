@@ -13,7 +13,7 @@ class SlashCommandsCog(commands.Cog, name="SlashCommands"):
     @app_commands.command(name="roles", description="Select a role from the categories available!")
     async def roles(self, interaction: discord.Interaction):
         view = RolesView()
-        await interaction.response.send_message("Choose a catergory to select a role from", view=view, ephemeral=True)
+        await interaction.response.send_message("Choose a category to select a role from", view=view, ephemeral=True)
         
     # Prune command that kicks members with no fluency role or bot role   
     @app_commands.command(name="prune", description="Prune users who do not have a role")
